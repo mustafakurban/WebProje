@@ -8,6 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using init.Models;
+using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 
 namespace init
 {
@@ -23,7 +27,15 @@ namespace init
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
+
+            services.AddDbContext<dbClass>(options => options.UseSqlServer(Configuration.GetConnectionString("dbConnection")));
             services.AddControllersWithViews();
+
+
+            services.AddControllers().AddNewtonsoftJson();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +51,7 @@ namespace init
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

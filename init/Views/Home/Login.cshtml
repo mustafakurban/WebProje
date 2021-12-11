@@ -1,0 +1,64 @@
+﻿@model init.Models.RegistrationViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<h2>Login</h2>
+
+
+<form id="loginform">
+    <div class="form-group">
+        <div class="col-md-12">
+            @Html.TextBoxFor(m => m.USERNAME, new { @class = "form-control", @placeholder = "Username" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            @Html.PasswordFor(m => m.PASSWORD, new { @class = "form-control", @placeholder = "Password" })
+        </div>
+    </div>
+
+
+
+
+
+    <div class="form-group">
+        <div class="col-md-12">
+            <a href="#" class="btn btn-primary" onclick="LoginUser()">Submit</a>
+        </div>
+    </div>
+
+</form>
+
+
+<script>
+
+    var LoginUser = function () {
+        var data = $("#loginform").serialize();
+
+        $.ajax({
+            type: "Post",
+            url: "/Home/LoginUser",
+            data: data,
+            success: function (response) {
+
+                if (response == "Fail") {
+                    window.location.href = "/Home/getMessage"
+                }
+                else if (response == "Admin") {
+                    window.location.href = "/Home/"
+                }
+                else {
+                    window.location.href = "/Home/Registration"
+                }
+
+            }
+
+        })
+
+    }
+
+</script>

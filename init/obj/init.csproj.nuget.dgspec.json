@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mustafa\\source\\repos\\init\\init\\init.csproj": {}
+    "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\init.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mustafa\\source\\repos\\init\\init\\init.csproj": {
+    "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\init.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mustafa\\source\\repos\\init\\init\\init.csproj",
+        "projectUniqueName": "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\init.csproj",
         "projectName": "init",
-        "projectPath": "C:\\Users\\mustafa\\source\\repos\\init\\init\\init.csproj",
-        "packagesPath": "C:\\Users\\mustafa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mustafa\\source\\repos\\init\\init\\obj\\",
+        "projectPath": "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\init.csproj",
+        "packagesPath": "C:\\Users\\rammf\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mustafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rammf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,40 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
