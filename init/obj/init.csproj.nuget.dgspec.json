@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mustafa\\source\\repos\\init\\init\\init.csproj": {}
+    "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\init.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mustafa\\source\\repos\\init\\init\\init.csproj": {
+    "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\init.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mustafa\\source\\repos\\init\\init\\init.csproj",
+        "projectUniqueName": "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\init.csproj",
         "projectName": "init",
-        "projectPath": "C:\\Users\\mustafa\\source\\repos\\init\\init\\init.csproj",
+        "projectPath": "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\init.csproj",
         "packagesPath": "C:\\Users\\mustafa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mustafa\\source\\repos\\init\\init\\obj\\",
+        "outputPath": "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mustafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,28 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

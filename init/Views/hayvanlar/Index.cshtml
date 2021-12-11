@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Dostlarımız";
+    var directroy = "";
+    var itemCount = 0;
+
+}
+
+@using init.Models
+@model List<hayvanlar>
+
+
+<head>
+    <title>Dostlarımız</title>
+    <link href="~/css/hayvanlar_Index.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <div>
+    @foreach (var item in from i in Model.Select((value, index) => new { value, index }) group i.value by i.index / 3 into g select g)
+    {
+
+        <div class="container-fluid">
+            <div class="row">
+
+                @foreach (var category in item)
+                {
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        
+                            @switch (category.katagori)
+                            {
+                                case "Köpek":
+                                    directroy = "/css/animal_images/dog.jpg";
+                                    break;
+                                case "Kedi":
+                                    directroy = "/css/animal_images/cat.jpg";
+                                    break;
+                                case "Kaplumbağa":
+                                    directroy = "/css/animal_images/turtle.jpg";
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                            <div class="card row" style="width: 18rem;">
+                                <img width="300" height="240" class="card-img-top" src=@directroy alt=@category.katagori>
+                                <div class="card-body">
+                                    <h5 class="card-title">@category.isim</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Sahiplen</a>
+                                </div>
+                            </div>
+                            <br />
+                        
+                    </div>
+                }
+
+            </div> <!-- End row -->
+        </div><!-- End container -->
+    }
+    </div>
+
+    
+
+
+
+
+</body>
+
