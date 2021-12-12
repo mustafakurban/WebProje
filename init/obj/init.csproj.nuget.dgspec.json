@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\init.csproj": {}
+    "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\init.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\init.csproj": {
+    "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\init.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\init.csproj",
+        "projectUniqueName": "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\init.csproj",
         "projectName": "init",
-        "projectPath": "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\init.csproj",
-        "packagesPath": "C:\\Users\\rammf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rammf\\Desktop\\WebProje-ros2_foxy\\WebProje-ros2_foxy\\init\\obj\\",
+        "projectPath": "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\init.csproj",
+        "packagesPath": "C:\\Users\\mustafa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mustafa\\Source\\Repos\\mustafakurban\\WebProje\\init\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rammf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mustafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
