@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using init.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace init.Controllers
 {
     public class HomeController : Controller
     {
+        
         public IActionResult Index()
         {
             return View();
@@ -22,6 +24,12 @@ namespace init.Controllers
         {
             return View();
         }
+        public IActionResult Api_doc()
+        {
+            return View();
+        }
+   
 
     }
+
 }

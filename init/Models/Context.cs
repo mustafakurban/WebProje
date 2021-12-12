@@ -10,8 +10,9 @@ namespace init.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-OGVQLH0\\MSSQLSERVER01;database=animal_shalter;integrated security=true;");
+            optionsBuilder.UseSqlServer("server=DESKTOP-OGVQLH0\\MSSQLSERVER01;database=barinak;integrated security=true;");
         }
         public DbSet<hayvanlar> animals { get; set; }
+        public DbSet<Apikeys> Apikeys { get; set; }
     }
 }
