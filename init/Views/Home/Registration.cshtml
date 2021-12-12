@@ -1,0 +1,61 @@
+﻿@model init.Models.SiteUser
+
+@{
+    ViewBag.title = "Sign Up";
+}
+
+<h2>Sign Up</h2>
+
+
+<form id="registerform">
+    <div class="form-group">
+        <div class="col-md-12">
+            @Html.TextBoxFor(m => m.USERNAME, new { @class = "form-control", @placeholder="Username"})
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            @Html.PasswordFor(m => m.PASSWORD, new { @class = "form-control", @placeholder = "Password"})
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            @Html.TextBoxFor(m => m.EMAIL, new { @class = "form-control", @placeholder = "Email"})
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            @Html.TextBoxFor(m => m.COUNTRY, new { @class = "form-control", @placeholder = "Country"})
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12">
+            <a href="#" class="btn btn-primary" onclick="RegisterUser()">Submit</a>
+        </div>
+    </div>
+
+</form>
+
+
+<script>
+
+    var RegisterUser = function () {
+        var data = $("#registerform").serialize();
+        
+        $.ajax({
+            type: "Post",
+            url: "/Home/Registration",
+            data: data,
+            success: function (response) {
+                alert("Success")
+            }
+
+        })
+
+    }
+
+</script>

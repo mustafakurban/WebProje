@@ -14,5 +14,7 @@ namespace init.Models
         }
         public DbSet<hayvanlar> animals { get; set; }
         public DbSet<Apikeys> Apikeys { get; set; }
+        public DbSet<SiteUser> User { get; set; }
+
     }
 }
