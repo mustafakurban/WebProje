@@ -17,5 +17,10 @@ namespace init.Controllers
             var degerler = c.animals.ToList();
             return View(degerler);
         }
+        public IActionResult sahiplen()
+        {
+
+            return View();
+        }
     }
 }

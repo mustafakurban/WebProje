@@ -2,11 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\init",
-    "\\init\\Views",
+    "\\init\\Controllers",
+    "\\init\\Models",
     "\\init\\Views\\Home",
-    "\\init\\wwwroot",
     "\\init\\wwwroot\\css"
   ],
-  "SelectedNode": "\\init\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\init.sln",
   "PreviewInSolutionExplorer": false
 }

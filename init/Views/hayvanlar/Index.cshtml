@@ -46,8 +46,9 @@
                                 <img width="300" height="240" class="card-img-top" src=@directroy alt=@category.katagori>
                                 <div class="card-body">
                                     <h5 class="card-title">@category.isim</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Sahiplen</a>
+                                    <p class="card-text fw-bold"> @category.katagori</p>
+                                    <p class="card-text fw-bold">Dostumuzun yaşı : @category.yas</p>
+                                    <a class="btn btn-primary" asp-area="" asp-controller="hayvanlar" asp-action="sahiplen">Sahiplen</a>
                                 </div>
                             </div>
                             <br />

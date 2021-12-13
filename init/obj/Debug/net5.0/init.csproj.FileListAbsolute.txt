@@ -122,3 +122,4 @@ C:\Users\mustafa\Source\Repos\mustafakurban\WebProje\init\bin\Debug\net5.0\Micro
 C:\Users\mustafa\Source\Repos\mustafakurban\WebProje\init\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\mustafa\Source\Repos\mustafakurban\WebProje\init\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 C:\Users\mustafa\Source\Repos\mustafakurban\WebProje\init\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\mustafa\Source\Repos\mustafakurban\WebProje\init\obj\Debug\net5.0\Razor\Views\hayvanlar\sahiplen.cshtml.g.cs
