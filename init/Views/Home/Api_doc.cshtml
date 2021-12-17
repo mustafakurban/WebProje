@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Dökümanlar";
+    Context c = new Context();
+    var degerler = c.animals.ToList();
+}
+@using init.Models
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dökümanlar</title>
+    <link href="~/css/Home_api_doc.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <br /><br /><br />
+    <main>
+        <div class="container py-4">
+            <div class="p-5 mb-4 rounded-3">
+                <div class="container-fluid py-5">
+                    <p class="col-md-8 fs-4 text-light">Api anahtarları sayesinde sunduğumuz Wep Api hizmetinden istekte bulunabiirsiniz. Sunduğuğumuz Api hizmetleri; Dostlarımızın bilgileri.</p>
+                    <p class="text-light">Api key : 5561<p>
+                    <p class="text-light">url/api/Api/api_key+evcil_hayvan_id şeklinde kullanılır.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+ 
+
+
+
+
+
+</body>
+</html>

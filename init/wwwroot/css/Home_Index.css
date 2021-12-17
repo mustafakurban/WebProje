@@ -1,0 +1,22 @@
+﻿
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+body {
+    background-image: url("../css/images/background_1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+

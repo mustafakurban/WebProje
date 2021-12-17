@@ -2,15 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <ApplicationIcon />
-    <OutputType>Exe</OutputType>
-    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< Updated upstream
-    <None Include="wwwroot\css\images\background_1.jpg" />
-=======
     <None Include="wwwroot\assets\css\styles.css" />
     <None Include="wwwroot\assets\demo\chart-area-demo.js" />
     <None Include="wwwroot\assets\demo\chart-bar-demo.js" />
@@ -19,20 +13,19 @@
     <None Include="wwwroot\assets\img\error-404-monochrome.svg" />
     <None Include="wwwroot\assets\js\datatables-simple-demo.js" />
     <None Include="wwwroot\assets\js\scripts.js" />
->>>>>>> Stashed changes
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

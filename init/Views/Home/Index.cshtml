@@ -1,8 +1,21 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@{ 
+    ViewBag.Title = "Ana Sayfa";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ana Sayfa</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Home_Index.css" rel="stylesheet" />
+</head>
+<body class="text-center">
+    <br /><br />
+        <main class="px-3">
+            <h1 class="text-light">Patili Köşk</h1>
+            <p class="text-light">Patili dostlarımıza sıcak bir yuva için elimizden geleni yapıyoruz.</p>
+            <p class="lead">
+                <a class="btn btn-lg btn-secondary fw-bold border-white bg-white" asp-area="" asp-controller="hayvanlar" asp-action="Index">Hemen Sahiplenin</a>
+            </p>
+        </main>
+</body>
+</html>
