@@ -1,0 +1,36 @@
+﻿@model init.Models.hayvanlar
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("HayvanGuncelle", "Admin", FormMethod.Post))
+{
+
+    <div class="container-sm">
+
+
+
+        <b>Kategori</b>
+        @Html.TextBoxFor(x => x.katagori, new { @class = "form-control" })
+
+        <b>Yaş</b>
+        @Html.TextBoxFor(x => x.yas, new { @class = "form-control" })
+
+        <b>İsim</b>
+        @Html.TextBoxFor(x => x.isim, new { @class = "form-control" })
+
+
+        <b>ID</b>
+        <br />@Html.TextBoxFor(x => x.id, new { @readonly = "readonly" })<br />
+
+        <br />
+        <button class="btn btn-success">Hayvan Güncelle</button>
+
+
+    </div>
+
+
+}

@@ -214,3 +214,5 @@ C:\Users\rammf\Documents\GitHub\WebProje\init\obj\Debug\net5.0\Razor\Views\Admin
 C:\Users\rammf\Documents\GitHub\WebProje\init\obj\Debug\net5.0\Razor\Views\Admin\AdminFriends.cshtml.g.cs
 C:\Users\rammf\Documents\GitHub\WebProje\init\obj\Debug\net5.0\Razor\Views\Admin\YeniKullanici.cshtml.g.cs
 C:\Users\rammf\Documents\GitHub\WebProje\init\obj\Debug\net5.0\Razor\Views\Admin\KullaniciGetir.cshtml.g.cs
+C:\Users\rammf\Documents\GitHub\WebProje\init\obj\Debug\net5.0\Razor\Views\Admin\HayvanGetir.cshtml.g.cs
+C:\Users\rammf\Documents\GitHub\WebProje\init\obj\Debug\net5.0\Razor\Views\Admin\YeniHayvan.cshtml.g.cs

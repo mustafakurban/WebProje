@@ -88,7 +88,54 @@ namespace init.Controllers
 
         public IActionResult AdminFriends()
         {
+            var friends = db.animals.ToList();
+            return View(friends);
+        }
+
+        [HttpGet]
+        public IActionResult YeniHayvan()
+        {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult YeniHayvan(hayvanlar hayvan)
+        {
+            db.animals.Add(hayvan);
+            db.SaveChanges();
+            return RedirectToAction("AdminFriends");
+        }
+
+
+        public IActionResult HayvanSil(int id)
+        {
+            var hayvan = db.animals.Find(id);
+            db.animals.Remove(hayvan);
+            db.SaveChanges();
+            return RedirectToAction("AdminFriends");
+        }
+
+        public IActionResult HayvanGetir(int id)
+        {
+            var hayvan = db.animals.Find(id);
+            return View("HayvanGetir", hayvan);
+        }
+
+        public IActionResult HayvanGuncelle(hayvanlar hayvan)
+        {
+
+            var h = db.animals.Find(hayvan.id);
+            h.id = hayvan.id;
+            h.yas = hayvan.yas;
+            h.isim = hayvan.isim;
+            h.katagori = hayvan.katagori;
+
+            db.SaveChanges();
+
+            return RedirectToAction("AdminFriends");
+
+        }
+
+
     }
 }

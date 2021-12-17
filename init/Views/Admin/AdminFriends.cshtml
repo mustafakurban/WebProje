@@ -1,4 +1,54 @@
-﻿@{
+﻿@using init.Models
+@model List<hayvanlar>
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
+
+<main>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Sahiplenilmeyi Bekleyen Dostlarımız
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>KATEGORİ</th>
+                        <th>YAŞ</th>
+                        <th>İSİM</th>
+                        <th>SİL</th>
+                        <th>GÜNCELLE</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.katagori</td>
+                            <td>@x.yas</td>
+                            <td>@x.isim</td>
+                            <td><a href="hayvanSil/@x.id" class="btn btn-danger">SİL</a></td>
+                            <td><a href="hayvanGetir/@x.id" class="btn btn-warning">GÜNCELLE</a></td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+            <td><a href="YeniHayvan" class="btn btn-info">Yeni Hayvan</a></td>
+        </div>
+
+
+
+
+
+</main>

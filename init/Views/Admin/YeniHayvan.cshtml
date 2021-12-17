@@ -1,0 +1,29 @@
+﻿@model init.Models.hayvanlar
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="container-sm">
+    <br />
+    <form class="form-group" method="post">
+
+        <b>Kategori</b>
+        @Html.TextBoxFor(x => x.katagori, new { @class = "form-control" })
+
+        <b>Yaş</b>
+        @Html.TextBoxFor(x => x.yas, new { @class = "form-control" })
+
+        <b>İsim</b>
+        @Html.TextBoxFor(x => x.isim, new { @class = "form-control" })
+
+
+        <br />
+        <button class="btn btn-success">Yeni Hayvan Ekle</button>
+
+
+
+    </form>
+</div>
