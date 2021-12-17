@@ -11,15 +11,10 @@ namespace init.Models
 
         [Key]
         public int USERID { get; set; }
-
         public string USERNAME { get; set; }
-
         public string PASSWORD { get; set; }
-
         public string EMAIL { get; set; }
-
         public string COUNTRY { get; set; }
-
         public int ROLEID { get; set; }
 
 

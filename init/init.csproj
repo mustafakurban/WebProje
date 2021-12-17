@@ -8,7 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
     <None Include="wwwroot\css\images\background_1.jpg" />
+=======
+    <None Include="wwwroot\assets\css\styles.css" />
+    <None Include="wwwroot\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\assets\js\datatables-simple-demo.js" />
+    <None Include="wwwroot\assets\js\scripts.js" />
+>>>>>>> Stashed changes
   </ItemGroup>
 
   <ItemGroup>

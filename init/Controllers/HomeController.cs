@@ -14,11 +14,16 @@ namespace init.Controllers
 {
     public class HomeController : Controller
     {
+<<<<<<< Updated upstream
         private readonly dbClass _dbc;
 
         public HomeController(dbClass dbc) {
             _dbc = dbc;
         }
+=======
+
+        Context db = new Context();
+>>>>>>> Stashed changes
 
         public IActionResult Index()
         {
