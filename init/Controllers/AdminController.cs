@@ -1,4 +1,5 @@
 ﻿using init.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -10,13 +11,14 @@ using System.Threading.Tasks;
 
 namespace init.Controllers
 {
-    
 
 
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         Context db = new Context();
 
+        
         public IActionResult AdminIndex()
         {
 

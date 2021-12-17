@@ -32,14 +32,30 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Api_doc">Dökümanlar</a>
                         </li>
 
-                        <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Giriş</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registration">Kayıt ol</a>
-                            </li>
-                        </ul>
+
+
+
+                        @if (User.IsInRole("User"))
+                        {
+
+                            <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">Çıkış Yap</a>
+                                </li>
+                            </ul>
+
+                        }
+                        else
+                        {
+                            <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Giriş</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registration">Kayıt ol</a>
+                                </li>
+                            </ul>
+                        }
 
 
                     </ul>

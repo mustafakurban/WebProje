@@ -1,20 +1,25 @@
 ﻿using init.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace init.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
 
         Context db = new Context();
-
+        
         public IActionResult Index()
         {
             return View();
@@ -68,34 +73,52 @@ namespace init.Controllers
             SiteUser user = db.User.SingleOrDefault(x => x.USERNAME == model.USERNAME && x.PASSWORD == model.PASSWORD);
 
             string result = "Fail";
+            bool isAuthenticate = false;
+            ClaimsIdentity identity = null;
 
             if (user != null)
             {
 
-                HttpContext.Session.SetString("UserId", user.USERID.ToString());
-                HttpContext.Session.SetString("UserName", user.USERNAME);
-
-
-
-
                 if (user.ROLEID == 2)
                 {
                     result = "GeneralUser";
+
+                    identity = new ClaimsIdentity(new[]
+                    {
+                        new Claim(ClaimTypes.Name, user.USERNAME),
+                        new Claim(ClaimTypes.Role, "User")
+                    }, CookieAuthenticationDefaults.AuthenticationScheme);
+                    isAuthenticate = true;
+
                 }
                 else if (user.ROLEID == 1)
                 {
                     result = "Admin";
+
+                    identity = new ClaimsIdentity(new[]
+                    {
+                        new Claim(ClaimTypes.Name, user.USERNAME),
+                        new Claim(ClaimTypes.Role, "Admin")
+                    }, CookieAuthenticationDefaults.AuthenticationScheme);
+                    isAuthenticate = true;
+
                 }
+            }
+
+            if (isAuthenticate)
+            {
+                var principal = new ClaimsPrincipal(identity);
+                var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
             }
 
 
             return Json(result);
         }
 
-
-        public ActionResult Logout()
+        
+        public async Task<ActionResult> Logout()
         {
-            HttpContext.Session.Clear();
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
             return RedirectToAction("Login");
         }
