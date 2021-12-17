@@ -1,0 +1,45 @@
+﻿@using init.Models
+@model dbCounter
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Dashboard</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+        <div class="row">
+            <div class="col-xl-4 col-md-8">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">Kullanıcı Sayısı</div>
+                    <div class="card-footer d-flex align-items-center justify-content-center">
+                        @Model.usersCount
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-8">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">Toplanan Bağış</div>
+                    <div class="card-footer d-flex align-items-center justify-content-center">
+                        0
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xl-4 col-md-8">
+                <div class="card bg-danger text-white mb-4">
+                    <div class="card-body">Sahiplenilmeyi Bekleyen Dostlarımız</div>
+                    <div class="card-footer d-flex align-items-center justify-content-center">
+                        @Model.friendsCount
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</main>

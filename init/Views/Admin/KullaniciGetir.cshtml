@@ -1,0 +1,41 @@
+﻿@model init.Models.SiteUser
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("KullaniciGuncelle", "Admin", FormMethod.Post))
+{
+
+<div class="container-sm">
+
+
+
+    <b>Role ID</b>
+    @Html.TextBoxFor(x => x.ROLEID, new { @class = "form-control" })
+
+    <b>Kullanıcı Adı</b>
+    @Html.TextBoxFor(x => x.USERNAME, new { @class = "form-control" })
+
+    <b>Email</b>
+    @Html.TextBoxFor(x => x.EMAIL, new { @class = "form-control" })
+
+    <b>Şifre</b>
+    @Html.PasswordFor(x => x.PASSWORD, new { @class = "form-control" })
+
+    <b>Ülke</b>
+    @Html.TextBoxFor(x => x.COUNTRY, new { @class = "form-control" })
+
+    <b>User ID</b>
+    <br />@Html.TextBoxFor(x => x.USERID, new { @readonly = "readonly" })<br />
+
+    <br />
+    <button class="btn btn-success">Kullanıcı Güncelle</button>
+
+
+</div>
+
+
+}

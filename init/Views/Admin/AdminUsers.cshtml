@@ -1,0 +1,56 @@
+﻿@using init.Models
+@model List<SiteUser>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<main>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Kayıtlı Kullanıcılar
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>ROLEID</th>
+                        <th>KULLANICI ADI</th>
+                        <th>EMAIL</th>
+                        <th>ÜLKE</th>
+                        <th>SİL</th>
+                        <th>GÜNCELLE</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.ROLEID</td>
+                            <td>@x.USERNAME</td>
+                            <td>@x.EMAIL</td>
+                            <td>@x.COUNTRY</td>
+                            <td><a href="KullaniciSil/@x.USERID" class="btn btn-danger">SİL</a></td>
+                            <td><a href="KullaniciGetir/@x.USERID" class="btn btn-warning">GÜNCELLE</a></td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+            <td><a href="YeniKullanici" class="btn btn-info">Yeni Kullanıcı</a></td>
+        </div>
+
+
+
+
+
+</main>
