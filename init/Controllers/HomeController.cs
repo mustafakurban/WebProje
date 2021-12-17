@@ -28,6 +28,17 @@ namespace init.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult aid(Aid model)
+        {
+            var aid = db.Aid.First();
+            aid.amount += model.amount;
+            db.SaveChanges();
+
+            return View();
+        }
+
         public IActionResult getMessage()
         {
             return View();
@@ -37,6 +48,7 @@ namespace init.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Registration()
         {
             return View();
@@ -46,20 +58,36 @@ namespace init.Controllers
         public IActionResult Registration(SiteUser model)
         {
 
-            SiteUser user = new SiteUser();
-            user.USERNAME = model.USERNAME;
-            user.PASSWORD = model.PASSWORD;
-            user.EMAIL = model.EMAIL;
-            user.COUNTRY = model.COUNTRY;
-            user.ROLEID = 2;
+            var foo = db.User.FirstOrDefault(w => w.USERNAME == model.USERNAME);
+            var resp = "Fail";
 
-            db.Add(user);
-            db.SaveChanges();
+            if (foo == null)
+            {
+                SiteUser user = new SiteUser();
+                user.USERNAME = model.USERNAME;
+                user.PASSWORD = model.PASSWORD;
+                user.EMAIL = model.EMAIL;
+                user.COUNTRY = model.COUNTRY;
+                user.ROLEID = 2;
+
+                db.Add(user);
+                db.SaveChanges();
+
+                resp = "success";
+
+            }
+            else
+            {
+                resp = "alreadyregistered";
+            }
+
+            
 
 
-            return View();
+            return Json(resp);
         }
 
+        [HttpGet]
         public IActionResult Login()
         {
             return View();

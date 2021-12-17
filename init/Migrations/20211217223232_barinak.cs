@@ -7,6 +7,19 @@ namespace init.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Aid",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    amount = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Aid", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "animals",
                 columns: table => new
                 {
@@ -52,13 +65,40 @@ namespace init.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Aid",
+                columns: new[] { "id", "amount" },
+                values: new object[] { 1, 1 });
+
+            migrationBuilder.InsertData(
+                table: "Apikeys",
+                columns: new[] { "Id", "ApiKey" },
+                values: new object[] { 1, 5561 });
+
+            migrationBuilder.InsertData(
                 table: "User",
                 columns: new[] { "USERID", "COUNTRY", "EMAIL", "PASSWORD", "ROLEID", "USERNAME" },
-                values: new object[] { 1, "Turkey", "haci.cingoz@ogr.sakarya.edu.tr", "123", 1, "g181210086@sakarya.edu.tr" });
+                values: new object[,]
+                {
+                    { 1, "Turkey", "haci.cingoz@ogr.sakarya.edu.tr", "123", 1, "g181210086@sakarya.edu.tr" },
+                    { 2, "Turkey", "mustafa.kurban@ogr.sakarya.edu.tr", "123", 1, "g191210056@sakarya.edu.tr" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "animals",
+                columns: new[] { "id", "isim", "katagori", "yas" },
+                values: new object[,]
+                {
+                    { 1, "Tarçın", "Köpek", 4 },
+                    { 2, "Duman", "Kedi", 2 },
+                    { 3, "Benekli", "Kaplumbağa", 1 }
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Aid");
+
             migrationBuilder.DropTable(
                 name: "animals");
 

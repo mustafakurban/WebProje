@@ -9,7 +9,7 @@ namespace init.Models
     {
     public int usersCount { get; set; }
     public int friendsCount { get; set; }
-    public int aidCount { get; set; }
+    public int? aidCount { get; set; }
 
     }
 }

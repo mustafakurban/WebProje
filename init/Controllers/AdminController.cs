@@ -25,7 +25,8 @@ namespace init.Controllers
             dbCounter dbc = new dbCounter()
             {
                 usersCount = db.User.Count(),
-                friendsCount = db.animals.Count()
+                friendsCount = db.animals.Count(),
+                aidCount = db.Aid.First().amount
             };
 
 
